@@ -10,9 +10,12 @@
 		"dist": "npm run build && npm run dist:build",
 		"dist:build": "build"
 	},
+	"author": {
+		"name" : "Leo Vernisse",
+		"email" : "leo.vernisse@gmail.com"
+	},
 	"build": {
 		"appId": "workstation.leone.app",
-		"category": "workstation.app.work",
 		"dmg": {
 			"contents": [
 				{
