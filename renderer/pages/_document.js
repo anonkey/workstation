@@ -14,6 +14,9 @@ const normalizeNextElements = `
     flex-direction: column;
     height: 100%;
   }
+  body {
+    background-color: transparent;
+  }
 `
 
 export default class MyDocument extends Document {

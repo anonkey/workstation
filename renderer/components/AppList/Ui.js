@@ -6,10 +6,12 @@ export const Container = Styled.View`
   justify-content: center;
   align-items: flex-start;
   padding-left: 10px;
+  background-color: transparent;
 `;
 
 export const List = Styled.FlatList`
   min-width: 100vw;
   min-height: 100vh;
   overflow: visible;
+  background-color: transparent;
 `;

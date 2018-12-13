@@ -49,11 +49,13 @@ export default class AppList extends React.PureComponent {
 
   onMouseEnter = () => {
     this.animate();
+    this.win.setSize(100, this.winBounds.height);
     this.win.setContentSize(100, this.winBounds.height);
   }
 
   onMouseLeave = () => {
     this.animate(-100, () => {
+      this.win.setSize(1, this.winBounds.height);
       this.win.setContentSize(1, this.winBounds.height);
     });
   }

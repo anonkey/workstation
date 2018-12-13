@@ -14,10 +14,11 @@ const {
   ipcMain,
 } = electron;
 
-// disableHardwareAcceleration for animation
-app.disableHardwareAcceleration();
 // Prepare the renderer once the app is ready
 app.on('ready', async () => {
+  // disableHardwareAcceleration for animation
+  // app.disableHardwareAcceleration();
+  // prepare next renderer
   await prepareNext('./renderer')
   const primaryDisplay = electron.screen.getPrimaryDisplay();
   const { size } = primaryDisplay;
