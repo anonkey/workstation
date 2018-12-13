@@ -7,7 +7,6 @@ import * as Ui from './Ui';
 export default class Github extends React.PureComponent {
   render() {
     const { data, onPress } = this.props;
-    console.log('RENDER DATA ! ', data);
     return (React.Children.toArray([
       <Ui.CountBadgeContainer>
         {

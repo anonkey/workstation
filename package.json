@@ -11,8 +11,8 @@
 		"dist:build": "build"
 	},
 	"author": {
-		"name" : "Leo Vernisse",
-		"email" : "leo.vernisse@gmail.com"
+		"name": "Leo Vernisse",
+		"email": "leo.vernisse@gmail.com"
 	},
 	"build": {
 		"appId": "workstation.leone.app",
@@ -50,7 +50,7 @@
 		"babel-plugin-module-resolver": "^3.1.1",
 		"babel-plugin-react-native-web": "^0.9.8",
 		"babel-plugin-styled-components": "^1.9.1",
-		"electron": "^3.0.10",
+		"electron": "^3.0.11",
 		"electron-builder": "^20.38.3",
 		"eslint-import-resolver-babel-module": "^4.0.0",
 		"next": "^7.0.2",

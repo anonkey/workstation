@@ -18,15 +18,10 @@ export default class Start extends React.PureComponent {
         config: data,
       });
     });
-    // setTimeout(() => {
-    //   new Notification('test');
-    // }, 400);
     ipcRenderer.on('notification', (e, notification) => {
       const notificationHostname = new URL(notification.from).hostname;
-      console.log('Notification HOST NAME ! ', notificationHostname);
       const apps = this.state.config.apps.map((app) => {
         const appHostname = new URL(app.url).hostname;
-        console.log(appHostname);
         if (appHostname === notificationHostname) {
           if (!app.notificatonCount) app.notificatonCount = 0;
           app.notificatonCount += 1;
@@ -38,10 +33,7 @@ export default class Start extends React.PureComponent {
           ...this.state.config,
           apps,
         }
-      }, () => {
-        console.log(this.state);
       });
-      console.log('main page got notification ! !! ! !', notification);
     });
   }
 
@@ -51,7 +43,7 @@ export default class Start extends React.PureComponent {
       if (app.url === appToOpen.url) {
         app.notificatonCount = 0;
       }
-      return {...app};
+      return { ...app };
     });
     this.setState({
       config: {

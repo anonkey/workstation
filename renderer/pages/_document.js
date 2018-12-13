@@ -13,9 +13,10 @@ const normalizeNextElements = `
     display: flex;
     flex-direction: column;
     height: 100%;
+    background: rgba(0, 0, 0, 0);
   }
-  body {
-    background-color: transparent;
+  html, body {
+    height: 0%;
   }
 `
 
