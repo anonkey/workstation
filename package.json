@@ -1,0 +1,66 @@
+{
+	"name": "workstation",
+	"version": "1.0.0",
+	"main": "main/index.js",
+	"license": "MIT",
+	"repository": "leon3s/workstation",
+	"scripts": {
+		"start": "electron .",
+		"build": "next build renderer && next export renderer",
+		"dist": "npm run build && npm run dist:build",
+		"dist:build": "build"
+	},
+	"build": {
+		"appId": "workstation.leone.app",
+		"category": "workstation.app.work",
+		"dmg": {
+			"contents": [
+				{
+					"x": 110,
+					"y": 150
+				},
+				{
+					"x": 240,
+					"y": 150,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb"
+			]
+		},
+		"win": {
+			"target": "squirrel",
+			"icon": "build/icon.ico"
+		}
+	},
+	"_moduleAliases": {
+		"react-native": "node_modules/react-native-web"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/preset-env": "^7.1.6",
+		"babel-plugin-module-resolver": "^3.1.1",
+		"babel-plugin-react-native-web": "^0.9.8",
+		"babel-plugin-styled-components": "^1.9.1",
+		"electron": "^3.0.10",
+		"electron-builder": "^20.38.3",
+		"eslint-import-resolver-babel-module": "^4.0.0",
+		"next": "^7.0.2",
+		"react": "^16.6.3",
+		"react-dom": "^16.6.3"
+	},
+	"dependencies": {
+		"app-root-path": "^2.1.0",
+		"electron-is-dev": "^1.0.1",
+		"electron-next": "^3.1.5",
+		"module-alias": "^2.1.0",
+		"react-art": "^16.6.3",
+		"react-native-web": "^0.9.8",
+		"styled-components": "^4.1.1"
+	}
+}
